@@ -60,7 +60,15 @@ allProducts.forEach(function (product) {
   // shopItemsContainer.append(productContainer);
   shopItemsContainer.insertAdjacentHTML(
     "beforeend",
-    '<div class="shop-itme"><span class="shop-item-title">Album 1</span><img class="shop-item-image" src="Images/Album 1.png"><div class="shop-item-details"><span class="shop-item-price">2</span><button class="btn btn-primary shop-item-button">Add to cart</button></div></div>'
+    '<div class="shop-itme"><span class="shop-item-title">' +
+      product.title +
+      '</span><img class="shop-item-image" src="' +
+      product.img +
+      '"><div class="shop-item-details"><span class="shop-item-price">' +
+      product.price +
+      '</span><button class="btn btn-primary shop-item-button" onclick="addProductBasketArray(' +
+      product.id +
+      ')">Add to cart</button></div></div>'
   );
 });
 
